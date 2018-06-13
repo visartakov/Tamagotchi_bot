@@ -1,14 +1,14 @@
-class Tamagotchi:
+class Tamagotchi_Bot:
     def __init__(self):
-        self.stats = {"food": 10, "happiness": 10,
-                 "health": 10, "sleep": 10}
+        self.stats = {"food": 100, "happiness": 100,
+                 "health": 100, "sleep": 100}
         self.sleeping = False
         self.dead = False
         self.playing = False
 
-    #Makes sure the statistic isn't below 0 or above 10
+    #Makes sure the statistic isn't below 0 or above 100
     def constrain(self, value):
-        value = min(10, value)
+        value = min(100, value)
         value = max(0, value)
         return value
 
@@ -59,5 +59,7 @@ class Tamagotchi:
            self.stats["health"] == 0):
            self.is_dead = True
 
+#Леша, к этому коду надо цепануть коды ифом и команды для бота, чтобы отсылал гифы
+#Пасаны, посмотрите функции ниже, мб можно попроще написать как-то...
 #time.sleep(сек) - приостановить выполнение программы на заданное количество секунд.
 #time.localtime([сек]) - как gmtime, но с DST флагом
